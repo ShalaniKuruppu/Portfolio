@@ -494,10 +494,30 @@ h3.my-profession{
 
 .about .about-content .education,
 .about .about-content .experience{
-    flex: 0 0  50%;
-    max-width:50%;
+    flex: 0 0  100%;
+    max-width:100%;
     margin-top: 30px;
     
+}
+.edu-photos {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* optional if screen gets small */
+}
+
+.edu-photo {
+  width: 320px;        /* bigger */
+  height: 200px;       /* bigger */
+  border-radius: 20px;
+  object-fit: cover;   /* fill box nicely */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.edu-photo:hover {
+  transform: scale(1.05);
 }
 
 .about .about-content h3.title{
@@ -864,7 +884,10 @@ h3.my-profession{
     .portfolio .portfolio-item,
     .service .service-item,
     .about .about-content .experience,
-    .about .about-content .education,
+    .about .about-content .education{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
     .about .about-content .skills,
     .about .about-content .personal-info{
         flex: 0 0 100%;
